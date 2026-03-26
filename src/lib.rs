@@ -1,3 +1,7 @@
+#![doc = include_str!("../README.md")]
+#![warn(clippy::pedantic)]
+#![warn(clippy::all)]
+
 pub fn add(left: u64, right: u64) -> u64 {
     left + right
 }

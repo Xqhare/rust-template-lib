@@ -1,5 +1,14 @@
 # $NAME
 
+TODO:
+
+- Find and replace `$NAME` with the name of the project
+- Put a description of the deity in as [Deity Description].
+- Put github / gitea description in as [Description].
+- Consider ArgosCI integration
+- Update `Cargo.toml`
+- Update `LICENSE`
+
 [Description]
 
 It follows my "All code written by me or part of rust's standard library and libc" philosophy.
@@ -8,6 +17,12 @@ You can learn more about that [here](https://blog.xqhare.net/posts/why_solve_pro
 ## Features
 
 - No dependencies
+
+## Environment
+
+$NAME expects the environment to provide:
+
+- `ls` UNIX command
 
 ## Naming
 
@@ -27,3 +42,8 @@ Add the following to your `Cargo.toml`:
 $NAME = { git = "https://github.com/xqhare/$NAME" }
 ```
 
+### Example
+
+```rust
+
+```
