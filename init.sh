@@ -72,16 +72,18 @@ echo Remove initialization instruction from README
 sed -i '/Run `bash init.sh`/d' README.md
 
 echo #
-echo Committing changes...
-echo #
-git commit -a -m "chore: run init.sh and setup project"
-echo #
-echo -e "${BLUE}init.sh committed.${NC}"
-echo -e "${GREEN}Success! $NAME is ready for development.${NC}"
-echo #
 echo Script self-destruct...
 rm init.sh
 echo #
+echo Committing changes...
+echo #
+# Personal git add and commit all alias
+git adcta "chore: run init.sh and setup project"
+echo #
+echo -e "${BLUE}Changes committed.${NC}"
+echo #
 echo -e "${BLUE}init.sh removed. Happy coding.${NC}"
+echo #
+echo -e "${GREEN}Success! $NAME is ready for development.${NC}"
 
 exit 0
