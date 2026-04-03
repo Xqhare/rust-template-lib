@@ -8,6 +8,7 @@ TODO:
 - Consider ArgosCI integration
 - Update `Cargo.toml`
 - Update `LICENSE`
+- Update `CONTRIBUTING.md`
 
 [Description]
 
