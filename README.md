@@ -2,13 +2,9 @@
 
 TODO:
 
-- Find and replace `$NAME` with the name of the project
-- Put a description of the deity in as [Deity Description].
-- Put github / gitea description in as [Description].
+- Run `bash init.sh`, all needed inputs will be asked for
 - Consider ArgosCI integration
-- Update `Cargo.toml`
-- Update `LICENSE`
-- Update `CONTRIBUTING.md`
+- Consider needed dependencies in `Cargo.toml`
 
 [Description]
 
@@ -48,3 +44,11 @@ $NAME = { git = "https://github.com/xqhare/$NAME" }
 ```rust
 
 ```
+
+## License
+
+$NAME is distributed under the [MIT](https://github.com/xqhare/$NAME/blob/master/LICENSE) license.
+
+## Contributing
+
+See [CONTRIBUTING](https://github.com/xqhare/$NAME/blob/master/CONTRIBUTING.md) for contribution guidelines.
