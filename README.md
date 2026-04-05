@@ -13,7 +13,7 @@ You can learn more about that [here](https://blog.xqhare.net/posts/why_solve_pro
 
 ## Features
 
-- No dependencies
+- _**No dependencies**_: All code is written by me or part of std.
 
 ## Environment
 
