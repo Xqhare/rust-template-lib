@@ -10,6 +10,7 @@ Wankers over Clankers after all. This doesn’t mean you can’t use AI to assis
 3. You may only create an issue after you have created a pull request addressing that issue.
     - This rule only applies to first time contributors.
 4. All other issues will be purged and ignored.
+5. ~~❌ US Citizens~~ US Citizens are forgiven for now, but they're on a short leash. Why? Because its funny.
 
 These are the rules. 
 Don't like them? Fork the project and move on with your life.
