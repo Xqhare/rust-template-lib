@@ -5,6 +5,9 @@
 
 set -e
 
+# Optional 1st arg: Passed in project name
+NAME="$1"
+
 # Colors for feedback
 GREEN='\033[0;32m'
 BLUE='\033[0;34m'
@@ -14,10 +17,14 @@ echo -e "${BLUE}--- Pantheon Project Initializer ---${NC}"
 echo #
 
 # 1. Gather Information
-read -p "Project/Deity Name (e.g., Hera): " NAME
+# (Below reads: If zero (length))
+if [ -z "$NAME" ]; then
+    read -p "Project/Deity Name (e.g., Hera): " NAME
+fi
 read -p "historical-startup-notes file path (e.g., /home/xqhare/Programming/project_ideas/idea.md): " HSN
 read -p "Deity Description (e.g., Etruscan Goddess of Women): " DEITY_DESC
 read -p "Project Description (e.g., A system monitor): " DESC
+read -p "Generate AI context file 'GEMINI.md' (Y/y/yes|N/n/no):" GEN_CTX
 echo #
 
 if [ -z "$HSN" ]; then
@@ -70,6 +77,37 @@ mv "$HSN" "historical-startup-notes.md"
 echo #
 echo Remove initialization instruction from README
 sed -i '/Run `bash init.sh`/d' README.md
+
+if [ "$GEN_CTX" == "Y" ] || [ "$GEN_CTX" == "y" ] || [ "$GEN_CTX" == "yes" ]; then
+
+    # Generate AI context file
+    echo #
+    echo -e "${BLUE}Generating AI context file...${NC}"
+    echo #
+    touch GEMINI.md
+
+    CTX_FILE="
+    # GEMINI.md
+    
+    ## Directory Overview
+    
+    This directory contains the codebase for **$NAME**, which is $DEITY_DESC.
+    Project Description: $DESC
+    
+    ## Key Files & Modules
+    
+    - **[src/lib.rs](file://\$(pwd)/src/lib.rs):** Entry point.
+    - **[historical-startup-notes.md](file://\$(pwd)/historical-startup-notes.md):** Architectural design notes.
+    
+    ## Development Conventions
+    
+    - **Zero External Dependencies:** Priorities Rust standard library and the \`futures\` or \`libc\` crate.
+    - **Commit Messages:** \`VERB(LOCATION): DESCRIPTION\`
+    "
+
+    echo "$CTX_FILE" > GEMINI.md
+
+fi
 
 echo #
 echo Script self-destruct...
