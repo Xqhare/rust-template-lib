@@ -2,7 +2,7 @@
 name = "$NAME"
 version = "0.1.0"
 edition = "2024"
-repository = "https://github.com/Xqhare/$name"
+repository = "https://github.com/Xqhare/$NAME"
 authors = ["Xqhare"]
 license = "MIT"
 

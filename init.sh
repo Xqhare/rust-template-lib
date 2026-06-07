@@ -71,6 +71,7 @@ sed -i "s/name = \"$NAME\"/name = \"$NAME_LOWER\"/g" Cargo.toml
 # Fix GitHub URLs (making them lowercase)
 sed -i "s/github.com\/xqhare\/$NAME/github.com\/xqhare\/$NAME_LOWER/g" README.md
 sed -i "s/github.com\/xqhare\/$NAME/github.com\/xqhare\/$NAME_LOWER/g" CONTRIBUTING.md
+sed -i "s/github.com\/xqhare\/$NAME/github.com\/xqhare\/$NAME_LOWER/g" Cargo.toml
 
 echo Move historical-startup-notes to root
 mv "$HSN" "historical-startup-notes.md"
