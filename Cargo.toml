@@ -16,6 +16,9 @@ license = "MIT"
 # XffValue only (no dependencies)
 # aequa = { git = "https://github.com/xqhare/aequa.git" }
 
+# Error handling
+# nemesis = { git = "https://github.com/xqhare/nemesis.git" }
+
 # Serde for XffValue (Nabu and Mawo reexport `XffValue`)
 # Working with `.xff` files
 # nabu = { git = "https://github.com/xqhare/nabu.git" }
