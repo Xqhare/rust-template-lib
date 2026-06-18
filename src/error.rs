@@ -1,6 +1,8 @@
+use nemesis::NemesisError;
 use std::fmt;
 
-pub type $NAMEResult<T> = Result<T, $NAMEError>;
+/// Crate-level Result type using `NemesisError`
+pub type $NAMEResult<T> = Result<T, NemesisError>;
 
 #[derive(Debug)]
 pub enum $NAMEError {

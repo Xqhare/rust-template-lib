@@ -17,7 +17,7 @@ license = "MIT"
 # aequa = { git = "https://github.com/xqhare/aequa.git" }
 
 # Error handling
-# nemesis = { git = "https://github.com/xqhare/nemesis.git" }
+nemesis = { git = "https://github.com/xqhare/nemesis.git" }
 
 # Serde for XffValue (Nabu and Mawo reexport `XffValue`)
 # Working with `.xff` files
