@@ -21,6 +21,14 @@ $NAME expects the environment to provide:
 
 - `ls` UNIX command
 
+## Roadmap
+
+`Talos` uses my [nomos](https://github.com/xqhare/nomos) project management system.
+
+The roadmap for this project can be found in the [nomos.md](nomos.md) file.
+
+All nomos files follow the syntax defined [here](https://github.com/Xqhare/nomos/blob/master/spec/).
+
 ## Naming
 
 As with all my projects, $NAME is named after an ancient deity.
