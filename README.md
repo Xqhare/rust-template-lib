@@ -23,7 +23,7 @@ $NAME expects the environment to provide:
 
 ## Roadmap
 
-`Talos` uses my [nomos](https://github.com/xqhare/nomos) project management system.
+`$NAME` uses my [nomos](https://github.com/xqhare/nomos) project management system.
 
 The roadmap for this project can be found in the [nomos.md](nomos.md) file.
 
