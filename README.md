@@ -31,7 +31,7 @@ All nomos files follow the syntax defined [here](https://github.com/Xqhare/nomos
 
 ## Naming
 
-As with all my projects, $NAME is named after an ancient deity.
+As with all my projects, `$NAME` is named after an ancient deity.
 Learn more about my naming scheme [here](https://blog.xqhare.net/posts/explaining_the_pantheon/).
 
 [Deity Description]
