@@ -22,7 +22,7 @@ nemesis = { git = "https://github.com/xqhare/nemesis.git" }
 # Serde for XffValue (Nabu and Mawo reexport `XffValue`)
 # Working with `.xff` files
 # nabu = { git = "https://github.com/xqhare/nabu.git" }
-# Working with `.json` or `.csv` files
+# Working with `.json`, `.toml` or `.csv` files
 # mawu = { git = "https://github.com/xqhare/mawu.git" }
 
 # CSRNG
