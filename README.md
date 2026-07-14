@@ -25,7 +25,7 @@ $NAME expects the environment to provide:
 
 `$NAME` uses my [nomos](https://github.com/xqhare/nomos) project management system.
 
-The roadmap for this project can be found in the [nomos.md](nomos.md) file.
+The roadmap for this project can be found in the [nomos.nomos](nomos.nomos) file.
 
 All nomos files follow the syntax defined [here](https://github.com/Xqhare/nomos/blob/master/spec/).
 
