@@ -21,7 +21,7 @@ echo #
 if [ -z "$NAME" ]; then
     read -p "Project/Deity Name (e.g., Hera): " NAME
 fi
-read -p "historical-startup-notes file path (e.g., /home/xqhare/Programming/project_ideas/idea.md): " HSN
+read -p "historical-startup-notes file path [File or Directory] (e.g., /home/xqhare/Programming/project_ideas/idea.md or /home/xqhare/Programming/project_ideas): " HSN
 read -p "Deity Description (e.g., Etruscan Goddess of Women): " DEITY_DESC
 read -p "Project Description (e.g., A system monitor): " DESC
 read -p "Generate AI context file 'GEMINI.md' (Y/y/yes|N/n/no):" GEN_CTX
@@ -32,8 +32,8 @@ if [ -z "$HSN" ]; then
     exit 1
 fi
 
-if [ ! -f "$HSN" ]; then
-    echo "Error: historical-startup-notes file does not exist."
+if [ ! -e "$HSN" ]; then
+    echo "Error: historical-startup-notes does not exist."
     exit 1
 fi
 
@@ -74,7 +74,14 @@ sed -i "s/github.com\/xqhare\/$NAME/github.com\/xqhare\/$NAME_LOWER/g" CONTRIBUT
 sed -i "s/github.com\/xqhare\/$NAME/github.com\/xqhare\/$NAME_LOWER/g" Cargo.toml
 
 echo Move historical-startup-notes to root
-mv "$HSN" "historical-startup-notes.md"
+if [ -f "$HSN" ]; then
+    mv "$HSN" "historical-startup-notes.md"
+elif [ -d "$HSN" ]; then
+    mv "$HSN" "historical-startup-notes"
+else
+    echo "Error: historical-startup-notes does not exist."
+    exit 1
+fi
 echo #
 echo Remove initialization instruction from README
 sed -i '/Run `bash init.sh`/d' README.md
