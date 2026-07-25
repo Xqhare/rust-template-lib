@@ -9,6 +9,6 @@
   "format": {},
   "update": {},
   "license": {},
-  "requires": []
+  "requires": ["nemesis"]
 }
 
