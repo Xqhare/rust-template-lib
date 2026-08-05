@@ -23,6 +23,9 @@
     clippy::shadow_reuse,
     clippy::blanket_clippy_restriction_lints,
     clippy::doc_include_without_cfg,
+    clippy::missing_inline_in_public_items,
+    clippy::std_instead_of_core,
+    clippy::std_instead_of_alloc,
     reason = "Ignored warnings"
 )]
 
