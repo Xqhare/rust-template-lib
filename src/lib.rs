@@ -26,6 +26,7 @@
     clippy::missing_inline_in_public_items,
     clippy::std_instead_of_core,
     clippy::std_instead_of_alloc,
+    clippy::mod_module_files,
     reason = "Ignored warnings"
 )]
 
