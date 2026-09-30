@@ -10,6 +10,21 @@ pub enum $NAMEError {
     Io(std::io::Error),
 }
 
+impl std::error::Error for $NAMEError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match self {
+            SSCCError::Io(err) => Some(err),
+            _ => None,
+        }
+    }
+}
+
+impl From<$NAMEError> for NemesisError {
+    fn from(err: SSCCError, source: &str) -> Self {
+        NemesisError::new(&format!("$NAME Error raised in: '{}'", source), err)
+    }
+}
+
 impl fmt::Display for $NAMEError {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         match self {
