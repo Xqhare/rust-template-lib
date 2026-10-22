@@ -1,4 +1,4 @@
-#![doc = include_str!("../README.md")]
+#![cfg_attr(doc, doc = include_str!("../README.md"))]
 #![warn(missing_docs)]
 #![warn(clippy::pedantic)]
 #![warn(clippy::all)]
